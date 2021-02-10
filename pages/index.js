@@ -54,7 +54,7 @@ export default function Home() {
           {' '}naar idee van{' '}
           <a className="underline" target="_blank"
              rel="noopener noreferrer" href="https://twitter.com/tijmenmoltmaker/status/1359481283366297600">
-            Thijmen Moltmaker
+            Tijmen Moltmaker
           </a>
         </p>
       </footer>
