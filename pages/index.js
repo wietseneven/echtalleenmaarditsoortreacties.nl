@@ -44,15 +44,15 @@ export default function Home() {
         </form>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
+      <footer className="flex px-4 mt-2 items-center justify-center w-full h-24 border-t">
         <p>
           Gemaakt door{' '}
-            <a className="underline" target="_blank" rel="noopener noreferrer" href="https://twitter.com/wietseneven">
-              Wietse Neven
-            </a>
+          <a className="underline" target="_blank" rel="noopener noreferrer" href="https://twitter.com/wietseneven">
+            Wietse Neven
+          </a>
           {' '}naar idee van{' '}
           <a className="underline" target="_blank"
-          rel="noopener noreferrer" href="https://twitter.com/tijmenmoltmaker/status/1359481283366297600">
+             rel="noopener noreferrer" href="https://twitter.com/tijmenmoltmaker/status/1359481283366297600">
             Thijmen Moltmaker
           </a>
         </p>

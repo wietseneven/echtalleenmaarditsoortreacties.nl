@@ -16,13 +16,13 @@ sizes.content = sizes.width - sizes.spacing * 2;
 export default function Bericht(props) {
   const canvasRef = useRef(null);
   const { query } = useRouter();
-  const [itteration, setItteration] = useState(0);
+  const [iteration, setIteration] = useState(0);
   const [downloadHref, setDownloadHref] = useState(null);
-  const message = useMemo(() => createMessage(query), [query.name, itteration]);
+  const message = useMemo(() => createMessage(query), [query.name, iteration]);
 
   const handleClick = useCallback(() => {
-    setItteration(prev => prev + 1);
-  }, [itteration]);
+    setIteration(prev => prev + 1);
+  }, [iteration]);
 
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -46,7 +46,7 @@ export default function Bericht(props) {
         {query.name && <>
           <canvas className="w-full h-auto" ref={canvasRef} width={sizes.width} height={sizes.height} />
             <footer className="flex px-4 space-x-2">
-              <a className="border px-4 py-2 text-xs hover:underline" href={downloadHref} download={`${message.subject}.png`}>Download</a>
+              <a className="border px-4 py-2 text-xs hover:underline" href={downloadHref} download={`${message.subject}.png`}>Download zodat je hem kunt Tweetten</a>
               <button className="border px-4 py-2 text-xs hover:underline" onClick={handleClick}>Opnieuw</button>
             </footer>
           </>
