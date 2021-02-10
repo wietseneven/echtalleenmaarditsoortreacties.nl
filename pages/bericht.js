@@ -65,7 +65,8 @@ export default function Bericht(props) {
           <a className="underline" target="_blank"
              rel="noopener noreferrer" href="https://twitter.com/tijmenmoltmaker/status/1359481283366297600">
             Tijmen Moltmaker
-          </a>
+          </a> naar aanleiding van de <a className="underline" target="_blank"
+                                         rel="noopener noreferrer" href="https://twitter.com/thierrybaudet/status/1359248522747510790">'Echt alléén maar dit soort reacties vandaag! ❤️'-Tweet van Thierry Baudet</a>
         </p>
       </footer>
     </div>
