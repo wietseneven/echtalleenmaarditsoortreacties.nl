@@ -25,7 +25,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-3 max-w-2xl text-2xl">
-          Iedereen kan wel eens een hart onder de riem gebruiken. Zeker onze Thierry. Vul daarom hier je naam in zodat we wat lof jouw kant op kunnen sturen.
+          Iedereen kan wel eens een hart onder de riem gebruiken. Net als Thierry. Vul daarom hier je naam in zodat we wat lof jouw kant op kunnen sturen.
         </p>
 
         <form onSubmit={handleSubmit(submitHandler)} method="GET" action="/bericht" className="mt-6 w-full max-w-sm text-left space-y-4">
