@@ -16,6 +16,7 @@ export default function Home() {
       <Head>
         <title>Echt alleen maar dit soort reacties</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/Held.png" />
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">

@@ -36,6 +36,7 @@ export default function Bericht(props) {
       <Head>
         <title>{ message.subject}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content={`/image?name=${query.name}&senderName=${query.senderName}`} />
       </Head>
 
       <div className="max-w-xl w-full h-full flex-1 mx-auto">
