@@ -48,7 +48,7 @@ export default function Bericht(props) {
           <canvas className="w-full h-auto" ref={canvasRef} width={sizes.width} height={sizes.height} />
             <footer className="flex px-4 space-x-2">
               <a className="border px-4 py-2 text-xs hover:underline select-none" href={downloadHref} download={`${message.subject}.png`}>Download zodat je hem kunt Tweetten</a>
-              <button className="border px-4 py-2 text-xs hover:underline select-none" onClick={handleClick}>Opnieuw</button>
+              <button className="border px-4 py-2 text-xs hover:underline select-none" onClick={handleClick}>Geneer opnieuw</button>
             </footer>
           </>
           }
