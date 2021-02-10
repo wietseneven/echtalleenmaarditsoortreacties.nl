@@ -1,15 +1,19 @@
 import Head from 'next/head'
 import createMessage from "../lib/createMessage";
 import {useRouter} from "next/router";
-import { useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import Link from 'next/link';
 
 const paragraphClassnames = 'mb-3 text-xl';
 
 export default function Liefde(props) {
   const { query } = useRouter();
+  const [itteration, setItteration] = useState(0);
+  const message = useMemo(() => createMessage(query.name), [query.name, itteration]);
 
-  const message = useMemo(() => createMessage(query.name), [query.name]);
+  const handleClick = useCallback(() => {
+    setItteration(prev => prev + 1);
+  }, [itteration]);
 
   return (
     <div className="flex flex-col justify-center min-h-screen py-2">
@@ -18,7 +22,7 @@ export default function Liefde(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="max-w-xl h-full flex-1 p-4 mx-auto">
+      <div className="max-w-xl w-full h-full flex-1 p-4 mx-auto">
         <Link href="/">
           <a>Terug</a>
         </Link>
@@ -37,7 +41,7 @@ export default function Liefde(props) {
             </p>
           }
 
-          {message.paragraphs.map(paragraph => <p key={paragraph} className={paragraphClassnames}>{paragraph}</p>)}
+          <p className={paragraphClassnames}>{message.paragraphs.join(' ')}</p>
 
           <p className={paragraphClassnames}>
             {message.finalParagraph}
@@ -45,8 +49,13 @@ export default function Liefde(props) {
           <p className={paragraphClassnames}>
             {message.ending}
           </p>
+          <p className={paragraphClassnames}>
+            {message.endGreeting}
+          </p>
+          <button className="border px-4 py-2 text-xs" onClick={handleClick}>Opnieuw</button>
         </main>
       </div>
+
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
         <p>
